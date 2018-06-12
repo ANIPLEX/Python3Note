@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e27783f1-7d10-4fe0-8219-74fd4639e20f" name="Default" comment="" />
+    <list default="true" id="e27783f1-7d10-4fe0-8219-74fd4639e20f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cc/A3.py" afterPath="$PROJECT_DIR$/cc/A3.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +36,7 @@
             <state relative-caret-position="203">
               <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#66#77#0" expanded="true" />
+                <element signature="e#67#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -357,7 +360,7 @@
         <state relative-caret-position="203">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#66#77#0" expanded="true" />
+            <element signature="e#67#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
