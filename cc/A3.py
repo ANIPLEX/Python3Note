@@ -4,4 +4,5 @@
 import json
 # 使用 requests 库
 import requests
-print(json.loads(requests.get('https://v1.hitokoto.cn/').text)['hitokoto'])
+print(json.loads(requests.get('https://v1.hitokoto.cn/').text)['from'])
+
