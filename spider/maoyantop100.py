@@ -1,7 +1,13 @@
 import requests
-from multiprocessing import pool
+from multiprocessing import Pool
 from requests.exceptions import RequestException
 import re
+from spider.config import *
+import pymongo
+
+client = pymongo.MongoClient(MONGO_URL,connect=False)
+db = client[MONGO_DB]
+
 def get_one_page(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
@@ -27,11 +33,19 @@ def parse_one_page(html):
             'time':item[4]
         }
 
+
+def save_to_mongo(item):
+    if db[MONGO_TABLE].insert(item):
+        print('存储成功')
+        return True
+    return False
+
 def main(offset):
     url = 'http://maoyan.com/board/4?offset='+str(offset)
-    html = get_one_page(url)
+    html = get_one_page(url).replace('\n','').replace(' ','')
     for item in parse_one_page(html):
         print(item)
+        save_to_mongo(item)
 
 if __name__ == '__main__':
     for i in  range(10):
