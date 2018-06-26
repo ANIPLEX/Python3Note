@@ -1,9 +1,7 @@
-import requests
+import requests,re,pymongo
 from multiprocessing import Pool
 from requests.exceptions import RequestException
-import re
 from spider.config import *
-import pymongo
 
 client = pymongo.MongoClient(MONGO_URL,connect=False)
 db = client[MONGO_DB]
@@ -32,7 +30,6 @@ def parse_one_page(html):
             'actor':item[3],
             'time':item[4]
         }
-
 
 def save_to_mongo(item):
     if db[MONGO_TABLE].insert(item):
